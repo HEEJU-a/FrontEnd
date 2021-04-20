@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <!-- https://blog.naver.com/i_upoint/222298122792 재귀호출, 내부함수, 콜백함수 -->
+<body>
+    <script>
+        var arr =[1,2,3,4,5,6,7,8,9];
+
+        arr.length = 3; // 객체안에서 갯수를 줄여버림
+        console.log('len : ' + arr.length);
+        arr[3] = 10;
+        console.log('len : ' + arr.length);
+        for(var i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        }
+
+        console.log('------')
+        function print(item) {
+            console.log('item : ' + item);
+        }
+
+        var result = arr.forEach(print); // 4번 호출
+        console.log(result); // return 하는거 없음
+
+    </script>
+</body>
+</html>
