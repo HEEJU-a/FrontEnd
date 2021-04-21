@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // var fn = function(resolve, reject){
+        //     //오래 걸리는 작업!!!!을 이렇게 함
+        //     if(작업이 잘 완료됐다면){
+        //         resolve();
+        //     }else{
+        //         reject();
+        //     }
+        // }
+        // var prom = new Promise(fn);
+
+        // function Promise(fn){
+
+        // }
+
+        var pro1 = new Promise(function(resolve, reject){ 
+            setTimeout(function(){
+                resolve(100);
+            }, 5000);
+        });
+
+        pro1.then(function(res){
+            console.log('pro1 : ' + res);
+        });
+        
+
+        // var pro2 = new Promise(function(resolve){
+        //     setTimeout(function(){
+        //         resolve(2);
+        //     }, 3000);
+        // });
+
+
+        // pro2.then(function(res){
+        //     console.log('pro2 : ' + res);
+        // });
+            
+        
+        var pro1 = new Promise(function(resolve, reject){ 
+            setTimeout(function(){
+                reject(200);
+            }, 2000);
+        });
+
+        pro1.
+        then(function(res){
+            console.log('pro1 : ' + res);
+        }).catch(function(err){
+            console.log('err : ' + err);
+        });
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

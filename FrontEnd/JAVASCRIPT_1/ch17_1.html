@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout(function(){
+        //     console.log('1')
+
+        //     setTimeout(function(){
+        //     console.log('2')
+        //     setTimeout(function(){
+        //     console.log('3')
+        // }, 1000);
+        // }, 3000);
+        // }, 5000);
+
+            
+
+        var result = 10;
+        
+        setTimeout(function(){
+        console.log('2: '  + result);
+        }, 3000);
+
+        setTimeout(function(){
+            console.log('1');
+            result = 2;
+        }, 5000);
+
+        setTimeout(function(){
+            console.log('3 : ' + result);
+        }, 1000);
+
+        //1, 2, 3이 찍히게 하고싶다
+        // 콜백지옥을 저렇게 말고 promise로 해결가능
+
+
+
+
+    </script>
+</body>
+</html>

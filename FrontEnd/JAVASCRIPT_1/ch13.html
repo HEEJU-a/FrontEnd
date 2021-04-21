@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+        arr.push(10); // -> 자바에서는 이게 add이다!
+        arr.push(20);
+        arr.push(30);
+        arr.push(40);
+        
+        // arr.shsift(); // -> 앞에있는 값 삭제할때!
+        // arr.shsift();
+
+
+       //arr.length = arr.length -1; // -> 여러개 지울땐 이게 편함
+
+        //arr.pop(); // -> 한개 지울때는 이게 편함
+        arr.unshift(11); // -> 앞에 값 삽입
+        arr.unshift(12); // -> 앞에 값 삽입
+
+        console.log('arr : ' + arr);
+        var delVal = arr.splice(2, 2);
+
+
+        console.log('arr : ' + arr);
+        console.log('delVal : ' +delVal);
+
+    </script>
+
+</body>
+</html>
